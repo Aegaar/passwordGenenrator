@@ -1,0 +1,16 @@
+:root {
+  --color-green: rgb(15, 187, 15);
+  --color-grey: rgb(146, 146, 146);
+  --color-dark:rgb(16, 15, 15);
+  --color-white: white;
+  font-family: 'Roboto', sans-serif;
+  color: var(--color-white);
+  background-color: var(--color-dark);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
