@@ -25,7 +25,7 @@ const PasswordSettings = () => {
   const formSubmitHandler = (event) => {
     event.preventDefault();
     // console.log(values)
-    passwordCtx.generatePassword()
+    passwordCtx.generatePassword(true)
     
   };
 
