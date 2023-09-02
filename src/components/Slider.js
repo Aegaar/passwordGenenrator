@@ -5,7 +5,6 @@ import PasswordContext from "../context/PasswordContext";
 const Slider = (props) => {
   const passwordCtx = useContext(PasswordContext);
 
-  console.log(passwordCtx);
   const [length, setLength] = useState(
     passwordCtx.passwordConfigurationValues.length
   );
@@ -18,22 +17,21 @@ const Slider = (props) => {
       length: newLength,
     };
     passwordCtx.updatePasswordConfiguration(newConfig);
-    console.log(passwordCtx.passwordConfigurationValues.length);
   };
 
   return (
-    <div className={classes.sliderContainer}>
-      <div className={classes.lengthContainer}>
-        <h2>Długość znaków</h2>
+    <div className={classes["slider-container"]}>
+      <div className={classes["length-container"]}>
+        <h2>Password Length</h2>
         <p>{length}</p>
       </div>
       <input
         type="range"
         min="5"
-        max="40"
-        value={length} 
+        max="30"
+        value={length}
         className={classes.slider}
-        id={classes.passwordLength}
+        id={classes["password-length"]}
         onChange={changeHandler}
       />
     </div>

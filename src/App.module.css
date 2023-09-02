@@ -4,8 +4,7 @@
   padding: 2rem;
 }
 
-
-header {
+.app-name {
   color: rgb(146, 146, 146);
   font-size: 1.5rem;
   margin-bottom: 1.4rem;
@@ -13,4 +12,3 @@ header {
   justify-content: center;
   align-items: center;
 }
-

@@ -5,7 +5,6 @@ const generatePasswordHandler = (
   passwordConfigurationValues,
   createPassword
 ) => {
-  console.log(passwordConfigurationValues);
   let charset = "";
   if (passwordConfigurationValues.uppercase) {
     charset += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -24,7 +23,7 @@ const generatePasswordHandler = (
 
   if (!createPassword) {
     if (!charset) {
-      showedValue = "You must choose some checkbox";
+      showedValue = "You must select a checkbox";
     } else {
       showedValue = "Click the button to generate password";
     }
@@ -38,9 +37,8 @@ const generatePasswordHandler = (
         showedValue += charset.charAt(randomIndex);
       }
     } else {
-      showedValue = "You must choose some checkbox";
+      showedValue = "You must select a checkbox";
     }
-    
   }
   return showedValue;
 };

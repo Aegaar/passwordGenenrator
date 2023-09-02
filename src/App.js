@@ -1,14 +1,12 @@
 import classes from "./App.module.css";
-// import PasswordValue from "./src/PasswordValue";
-// import PasswordSettings from "./src/PasswordSettings";
 import PasswordSettings from "./components/PasswordSettings";
-import PasswordValue from './components/PasswordValue'
+import PasswordValue from "./components/PasswordValue";
 import PasswordProvider from "./context/PasswordProvider";
 
 function App() {
   return (
     <PasswordProvider>
-      <header className={classes.fd}>Password Generator</header>
+      <header className={classes["app-name"]}>Password Generator</header>
       <main>
         <PasswordValue />
         <PasswordSettings />
@@ -16,5 +14,8 @@ function App() {
     </PasswordProvider>
   );
 }
- 
+
 export default App;
+
+
+

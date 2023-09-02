@@ -1,11 +1,9 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import classes from "./PasswordCheckboxes.module.css";
-// import { useEffect } from "react";
 import PasswordContext from "../context/PasswordContext";
 
 const PasswordCheckboxes = (props) => {
   const passwordCtx = useContext(PasswordContext);
-  console.log(passwordCtx.passwordConfigurationValues);
 
   const checkboxesHandler = (event) => {
     const newConfig = {
@@ -25,7 +23,9 @@ const PasswordCheckboxes = (props) => {
           onChange={checkboxesHandler}
           defaultChecked
         />
-        <label htmlFor="uppercase">Include Uppercase Letters</label>
+        <label htmlFor="uppercase" className={classes["checkbox-label"]}>
+          Include Uppercase Letters
+        </label>
       </div>
 
       <div className={classes["form-control"]}>
@@ -36,7 +36,9 @@ const PasswordCheckboxes = (props) => {
           onChange={checkboxesHandler}
           defaultChecked
         />
-        <label htmlFor="lowercase">Include Lowercase Letters</label>
+        <label htmlFor="lowercase" className={classes["checkbox-label"]}>
+          Include Lowercase Letters
+        </label>
       </div>
 
       <div className={classes["form-control"]}>
@@ -47,7 +49,9 @@ const PasswordCheckboxes = (props) => {
           onChange={checkboxesHandler}
           defaultChecked
         />
-        <label htmlFor="numbers">Include Numbers</label>
+        <label htmlFor="numbers" className={classes["checkbox-label"]}>
+          Include Numbers
+        </label>
       </div>
 
       <div className={classes["form-control"]}>
@@ -58,7 +62,9 @@ const PasswordCheckboxes = (props) => {
           onChange={checkboxesHandler}
           defaultChecked
         />
-        <label htmlFor="symbols">Include Symbols</label>
+        <label htmlFor="symbols" className={classes["checkbox-label"]}>
+          Include Symbols
+        </label>
       </div>
     </div>
   );
