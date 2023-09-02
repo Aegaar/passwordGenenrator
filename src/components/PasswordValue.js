@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from './PasswordValue.module.css'
+// import {usePasswordContext} from '../context/PasswordContext'
 
 const PasswordValue = () => {
     return (
@@ -10,4 +11,4 @@ const PasswordValue = () => {
       )
 }
 
-export default PasswordValue
+export default PasswordValue;

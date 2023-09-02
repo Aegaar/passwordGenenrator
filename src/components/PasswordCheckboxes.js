@@ -1,26 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import classes from "./PasswordCheckboxes.module.css";
 // import { useEffect } from "react";
+import PasswordContext from "../context/PasswordContext";
 
 const PasswordCheckboxes = (props) => {
-    const [values, setValues] = useState({
+  const passwordCtx = useContext(PasswordContext);
+  console.log(passwordCtx.passwordConfigurationValues);
 
-    })
-
-    // useEffect(() => {
-    //     console.log(values);
-    //   }, [values]);
-
-    const checkboxesHandler = (event) => {
-        const updatedValues = {
-          ...values,
-          [event.target.name]: event.target.checked,
-        };
-        setValues(updatedValues);
-        props.onCheckbox(updatedValues); 
-      };
-      
-      
+  const checkboxesHandler = (event) => {
+    const newConfig = {
+      ...passwordCtx.passwordConfigurationValues,
+      [event.target.name]: event.target.checked,
+    };
+    passwordCtx.updatePasswordConfiguration(newConfig);
+  };
 
   return (
     <div className={classes["form-controls"]}>

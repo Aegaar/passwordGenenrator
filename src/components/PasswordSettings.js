@@ -1,43 +1,45 @@
-import React, { useState } from 'react';
+import { useContext } from 'react';
 import classes from './PasswordSetting.module.css';
 import Slider from './Slider';
 import PasswordCheckboxes from './PasswordCheckboxes';
-import useForm from '../hooks/useForm';
+import PasswordContext from "../context/PasswordContext";
 
 const PasswordSettings = () => {
-  const [passwordLength, setPasswordLength] = useState(5);
+  const passwordCtx = useContext(PasswordContext);
+  //  const [values, setValues] = useForm({
+  //       length: 5,
+  //       uppercase: false,
+  //       lowercase: false,
+  //       numbers: false,
+  //       symbols: false,
+  //   })
 
-   const [values, setValues] = useForm({
-        length: 5,
-        uppercase: false,
-        lowercase: false,
-        numbers: false,
-        symbols: false,
-    })
+// usePasswordContext('tesdads')
 
 
-  const passwordLengthHandler = (event) => {
-    setPasswordLength(event.target.value);
-    console.log("Aktualna wartość passwordLength:", passwordLength);
-  };
+  // const passwordLengthHandler = (event) => {
+  //   setPasswordLength(event.target.value);
+  //   console.log("Aktualna wartość passwordLength:", passwordLength);
+  // };
 
   const formSubmitHandler = (event) => {
     event.preventDefault();
-    console.log(event)
+    // console.log(values)
+    passwordCtx.generatePassword()
     
   };
 
-  const getCheckboxesValues = (event) => {
-    console.log(event)
-  }
+  // const getCheckboxesValues = (event) => {
+    
+  // }
 
 
   return (
     <div className={classes.container}>
         
     <form className={classes['password-configuration-container']} onSubmit={formSubmitHandler}>
-      <Slider onChange={passwordLengthHandler}/>
-      <PasswordCheckboxes onCheckbox={getCheckboxesValues} />
+      <Slider/>
+      <PasswordCheckboxes/>
 
       <button className={classes['generate-button']} type='submit' >Generate</button>
       </form>
