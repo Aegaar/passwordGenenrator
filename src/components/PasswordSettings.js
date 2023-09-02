@@ -43,9 +43,6 @@ const PasswordSettings = () => {
 
       <button className={classes['generate-button']} type='submit' >Generate</button>
       </form>
-     {/* <div className={classes.generate}>
-     
-     </div> */}
     </div>
   );
 }

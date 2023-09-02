@@ -49,10 +49,10 @@ const PasswordProvider = (props) => {
   const [passwordConfigurationValues, setPasswordConfigurationValues] =
     useState({
       length: 5,
-      uppercase: false,
-      lowercase: false,
-      numbers: false,
-      symbols: false,
+      uppercase: true,
+      lowercase: true,
+      numbers: true,
+      symbols: true,
     });
 
   const [createPassword, setCreatePassword] = useState(false);

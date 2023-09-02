@@ -5,11 +5,17 @@ import { useContext } from 'react'
 
 const PasswordValue = () => {
     const passwordCtx = useContext(PasswordContext)
-    console.log(passwordCtx.showedValue)
+    
+    const copyToClipboard = () => {
+        const input = document.querySelector('input[type="text"]');
+        input.select();
+        document.execCommand('copy');
+        input.setSelectionRange(0, 0);
+      };
+
     return (
-        <div className={classes.container}>
-            <p>{passwordCtx.showedValue}</p>
-            <i className="ri-file-copy-line"></i>
+        <div className={classes.container} onClick={copyToClipboard}>
+            <input type="text" value={passwordCtx.showedValue ? passwordCtx.showedValue : 'Click the button to generate password'} readOnly/>
         </div>
       )
 }

@@ -22,7 +22,8 @@ const PasswordCheckboxes = (props) => {
           type="checkbox"
           id="uppercase"
           name="uppercase"
-          onClick={checkboxesHandler}
+          onChange={checkboxesHandler}
+          defaultChecked
         />
         <label htmlFor="uppercase">Include Uppercase Letters</label>
       </div>
@@ -32,7 +33,8 @@ const PasswordCheckboxes = (props) => {
           type="checkbox"
           id="lowercase"
           name="lowercase"
-          onClick={checkboxesHandler}
+          onChange={checkboxesHandler}
+          defaultChecked
         />
         <label htmlFor="lowercase">Include Lowercase Letters</label>
       </div>
@@ -42,7 +44,8 @@ const PasswordCheckboxes = (props) => {
           type="checkbox"
           id="numbers"
           name="numbers"
-          onClick={checkboxesHandler}
+          onChange={checkboxesHandler}
+          defaultChecked
         />
         <label htmlFor="numbers">Include Numbers</label>
       </div>
@@ -52,7 +55,8 @@ const PasswordCheckboxes = (props) => {
           type="checkbox"
           id="symbols"
           name="symbols"
-          onClick={checkboxesHandler}
+          onChange={checkboxesHandler}
+          defaultChecked
         />
         <label htmlFor="symbols">Include Symbols</label>
       </div>

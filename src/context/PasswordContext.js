@@ -3,10 +3,10 @@ import { createContext} from "react";
 
 const PasswordContext = createContext({
     length: 5,
-    uppercase: false,
-    lowercase: false,
-    numbers: false,
-    symbols: false,
+    uppercase: true,
+    lowercase: true,
+    numbers: true,
+    symbols: true,
 })
 
 export default PasswordContext
