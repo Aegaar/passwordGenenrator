@@ -2,6 +2,9 @@
 
 This is a simple React project that allows you to generate passwords with a specified length and character content, such as digits, symbols, uppercase letters, and lowercase letters.
 
+
+![generateWithAllOptions](https://github.com/Aegaar/passwordGenenrator/assets/117531984/106f20be-087e-4f78-a416-cf8056438de7)
+
 ## Running the Application
 
 To run this application, follow these steps:
@@ -21,6 +24,8 @@ The application will run locally and be accessible at http://localhost:3000 in y
 ### Password Configuration
 
 You can customize the generated passwords by selecting the length and specifying the types of characters to include in the password. The application allows you to include digits, symbols, uppercase letters, and lowercase letters in the password.
+
+![generateWithSomeOption2](https://github.com/Aegaar/passwordGenenrator/assets/117531984/8aec4931-3a4c-4a70-8c0d-dc012b00ccdc)
 
 ### Application Features
 
