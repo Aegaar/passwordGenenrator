@@ -1,7 +1,3 @@
-body {
-  overflow: hidden;
-}
-
 :root {
   --color-green: rgb(15, 187, 15);
   --color-grey: rgb(146, 146, 146);
@@ -17,4 +13,5 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: hidden;
 }
